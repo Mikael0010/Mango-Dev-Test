@@ -1,4 +1,4 @@
-2021-11-02 14:52:15 database: flush
+2021-11-02 22:49:56 database: flush
 org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Mikael/Desktop/Work stuff/MangoSoft/Mango-Dev-Test/mangodb.mv.db [1.4.200/7]" [50000-200]
 	at org.h2.message.DbException.get(DbException.java:194)
 	at org.h2.message.DbException.convert(DbException.java:347)
@@ -135,7 +135,7 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Mik
 	at org.h2.mvstore.FileStore.open(FileStore.java:172)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
 	... 120 more
-2021-11-02 14:52:17 database: flush
+2021-11-02 22:49:57 database: flush
 org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Mikael/Desktop/Work stuff/MangoSoft/Mango-Dev-Test/mangodb.mv.db [1.4.200/7]" [50000-200]
 	at org.h2.message.DbException.get(DbException.java:194)
 	at org.h2.message.DbException.convert(DbException.java:347)

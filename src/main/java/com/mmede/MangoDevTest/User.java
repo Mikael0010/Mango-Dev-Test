@@ -1,14 +1,12 @@
 package com.mmede.MangoDevTest;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity 
 public class User {
 
-	private @Id @GeneratedValue long id;
-	private String username;
+	private @Id String username;
 	private String password; //Should be hashed or something but I'm not doing it for this
 
 	private User() {}
@@ -17,6 +15,7 @@ public class User {
 		this.username = username;
 		this.password = password;
 	}
+	
 
 	public String getUsername() {
 		return username;
