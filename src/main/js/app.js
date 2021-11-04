@@ -37,10 +37,11 @@ class App extends React.Component {
 	  }
 
 	handleSubmit() {
+		if (this.state.newTitle == '') {
+			alert("You cannot have an empty title");
+			return;
+		}
 
-		alert("Created new Item " + this.state.newTitle +': '+ this.state.newDescription);
-		this.toggleModal();
-		
 		fetch('/items', {
 			method: 'POST',
 			body: JSON.stringify({title:this.state.newTitle, description:this.state.newDescription}),
@@ -48,10 +49,12 @@ class App extends React.Component {
 				'Content-Type': 'application/json'
 			}
 		}).then(response => {
-			if (response.status >= 200 && response.status < 300) {
+			if (response.status >= 200 && response.status < 300) {				
+				window.location.reload(true);	//Instead update this.state.items
+				this.toggleModal();
 				return response;
 			  } else {
-			   console.log('Somthing went wrong');
+				alert("Something went wrong");
 			  }
 		}).catch(err => err);
 		
